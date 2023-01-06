@@ -86,3 +86,20 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+// 1. I will need to use a .length property on an array to calculate a total number of months in that array
+/* 2. I will need to get a total sum of losses and profits within an array. 
+      - I will declare a variable and add intergers of all arrays together by looping.
+
+/* 3. I will need to find out the average of the changes in profit/ losses over the entire period:
+      - I will calculate the difference for each single month by looping through every single array.
+      - I will store these differences in a seperate array.
+      - I will use maths to average out the previous array numbers. (total/number of Months)
+      - I will create a function to determine the smallest number and the biggest interger in an array.
+      - I will store the results in seperate variables.  
+
+      hints : average changes : £7803
+      to print to the nearest 100th in JS use num.toFixed 
+      
+*/
+
