@@ -99,17 +99,19 @@ var finances = [
       - I will store the results in seperate variables.  
 
       hints : average changes : £7803
-      there are 85 months in total
+      there are 86 months in total
       to print to the nearest 100th in JS use num.toFixed 
 
 */
 
-let totalMonths = 0;
-let totalRevenue = 0;
+let totalMonths = 0; // 86
+let totalRevenue = 0; //38382578
 
 let changes = [];
 let avProfit = 0;
 let avLoss = 0;
+
+
 
 // looping through the whole array 
 
@@ -117,11 +119,16 @@ for (let i = 0; i < finances.length; i++) {
 
 // selecting only numbers and totalling it up
 
-    totalMonths = totalMonths + finances[i][1]
+    totalRevenue = totalRevenue + finances[i][1]
+// totalMonths = totalMonths + finances[i][0]
+
+// declating total number of months in finances array. 
+    totalMonths = finances.length; 
 
 };
 
-console.log(totalMonths)
+console.log(totalMonths) //total number of months
+console.log(totalRevenue) //total revenue
 
 
 
