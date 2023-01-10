@@ -24,3 +24,7 @@ N/A
 MIT
 
 ## Deployment link and screenshot
+
+https://19lola89.github.io/financial_evaluation/
+
+<img width="1440" alt="Screenshot 2023-01-10 at 10 57 43" src="https://user-images.githubusercontent.com/86410482/211533848-cbb3641a-d94e-4b16-b19f-26e8027642c3.png">
