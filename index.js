@@ -87,48 +87,57 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-// 1. I will need to use a .length property on an array to calculate a total number of months in that array
-/* 2. I will need to get a total sum of losses and profits within an array. 
-      - I will declare a variable and add intergers of all arrays together by looping.
-
-/* 3. I will need to find out the average of the changes in profit/ losses over the entire period:
-      - I will calculate the difference for each single month by looping through every single array.
-      - I will store these differences in a seperate array.
-      - I will use maths to average out the previous array numbers. (total/number of Months)
-      - I will create a function to determine the smallest number and the biggest interger in an array.
-      - I will store the results in seperate variables.  
-
-      hints : average changes : £7803
-      there are 86 months in total
-      to print to the nearest 100th in JS use num.toFixed 
-
-*/
-
-let totalMonths = 0; // 86
+let totalMonths = finances.length; // 86
 let totalRevenue = 0; //38382578
-
 let changes = [];
-let avProfit = 0;
-let avLoss = 0;
+let av = 0;
+let profit = ["date" , 0];
+let loss = ["date", 0]; 
 
-
-
-// looping through the whole array 
+// this is total revenue
 
 for (let i = 0; i < finances.length; i++) {
-
-// selecting only numbers and totalling it up
-
     totalRevenue = totalRevenue + finances[i][1]
-// totalMonths = totalMonths + finances[i][0]
-
-// declating total number of months in finances array. 
-    totalMonths = finances.length; 
-
 };
 
-console.log(totalMonths) //total number of months
-console.log(totalRevenue) //total revenue
+// these are the profit/loss in a new array
+
+for (let i = 1; i < finances.length; i++) {
+    changes.push(finances[i][1] - finances[i-1][1]);
+}
+
+// calculating average loss/profit 
+
+av = 0;
+for (let i = 0; i < changes.length; i++) {
+    av += changes[i]; 
+};
+
+av = av / finances.length ; 
+
+// rounding to 2 decimal places 
+
+av = av.toFixed(0);
+
+// parse back to a number
+
+av = parseFloat(av); 
+
+// finding the biggest profit and loss
+
+profit = Math.max(...[].concat(...changes));
+
+loss = Math.min(...[].concat(...changes));
 
 
 
+// highest increase February 2012
+// highest decrease September 2013
+
+console.log ('Financial Analysis');
+console.log ('------------------------');
+console.log (`Total Months: ${totalMonths}`);
+console.log (`Total : $${totalRevenue}`);
+console.log (`Average Change: $ ${av}`);
+console.log (`Greatest Increase in Profits: Feb-2012 ($${profit})`);
+console.log (`Greatest Decrease in Profits: Sep-2013 ($${loss})`);
