@@ -12,7 +12,7 @@ N/A
 
 ## Usage 
 
-Can be used to find out various revenue numbers for specificn years and average gains and losses during specific time frame. 
+Can be used to find out various revenue numbers for specific years and average gains and losses during specific time frame. 
 
 ## Credits 
 
